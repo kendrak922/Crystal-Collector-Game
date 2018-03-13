@@ -3,24 +3,16 @@
 $(document).ready(function() {
 
  //variables
-//  let randNumber = "";
-//  let crystalOne = "";
-//  let crystalTwo = "";
-//  let crystalThree = "";
-//  let crystalFour = "";
- 
-//  let score = 0;
  let randNumber = setNumber(120,19);
  let crystalOne = setNumber(1,12);
  let crystalTwo = setNumber(1,12);
  let crystalThree = setNumber(1,12);
  let crystalFour = setNumber(1,12);
- let score = 0; 
  let first = "";
- let second = "";
- let third = "";
- let guessCount = 0
- let result = 0
+ let result = "";
+ let score = 0;
+ let wins = 0;
+ let loses = 0;
 
 
  function setNumber(max, min){
@@ -28,39 +20,48 @@ $(document).ready(function() {
 };
 
  $(".randNumber").text(randNumber);
-//reset
 
+ //reset
 function reset() {
-     setNumber()
+     setNumber();
+     score = 0;
  }
- console.log(randNumber)
 
-//assign values to crystals
- $(".orange").data("value") === crystalOne;
- $(".green").data("value") === crystalTwo;
- $(".purple").data("value") === crystalThree;
- $(".white").data("value") === crystalFour;
+
+// //assign values to crystals
+$(".orange").val(crystalOne);
+$(".green").val(crystalTwo);
+ $(".purple").val(crystalThree);
+ $(".white").val(crystalFour);
+
+//  //parse int
+//  crystalOne = parseInt(crystalOne, 10);
+//  crystalTwo= parseInt(crystalTwo, 10);
+//  crystalThree= parseInt(crystalThree, 10);
+//  crystalFour= parseInt(crystalFour, 10);
 
 //add value of crystals to score
-$('.crystal').click(function(){
-    if(score === 0){
-        first += $(this).val();
-        guessCount = +1;
-       return first
-    } else if (guessCount === 1){
-        second += $(this).val()
-        guessCount = +1;
-        result = first + second;
-        return result
-    } else if(guessCount === 2){
-     third += $(this).val()
-     guessCount = +1;
-     result = first + second + third;
-      return result;
+$(".crystals-button").click(function(){
+    if(score = 0 ){
+       let first = $(".crystals-button").val();
+        result = first;
+        result = score;
+    }else if (randNumber = score){
+        wins ++;
+        reset();
+    } else if(randNumber < score ){
+        loses ++;
+        reset();
     }
+    else{ 
+        while(score < randNumber){
+        score = $(".crystals-button").val() + result;
+        }
+    };
+$(".score").text(score);
 });
-$('.score').text(result);
 
+if()
 
 
 
