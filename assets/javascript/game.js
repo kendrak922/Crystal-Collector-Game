@@ -12,57 +12,51 @@ $(document).ready(function() {
  let result = "";
  let score = 0;
  let wins = 0;
- let loses = 0;
-
+ let losses = 0;
 
  function setNumber(max, min){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
  $(".randNumber").text(randNumber);
-
- //reset
+ $(".wins").text(wins);
+ $(".losses").text(losses);
+ 
+ 
+//reset
 function reset() {
      setNumber();
      score = 0;
  }
 
-
 // //assign values to crystals
-$(".orange").val(crystalOne);
-$(".green").val(crystalTwo);
- $(".purple").val(crystalThree);
- $(".white").val(crystalFour);
 
-//  //parse int
-//  crystalOne = parseInt(crystalOne, 10);
-//  crystalTwo= parseInt(crystalTwo, 10);
-//  crystalThree= parseInt(crystalThree, 10);
-//  crystalFour= parseInt(crystalFour, 10);
+$(".orange").attr("value", crystalOne);
+$(".green").attr("value", crystalTwo);
+ $(".purple").attr("value", crystalThree);
+ $(".white").attr("value", crystalFour);
+
 
 //add value of crystals to score
-$(".crystals-button").click(function(){
-    if(score = 0 ){
-       let first = $(".crystals-button").val();
-        result = first;
-        result = score;
+$(".crystals").click(function (){
+    if(score < randNumber){
+       let crystalValue = ($(this).val(".crystals"));
+       let newCrystalValue = parseInt(crystalValue) 
+       score += newCrystalValue
     }else if (randNumber = score){
         wins ++;
+        return losses
         reset();
-    } else if(randNumber < score ){
-        loses ++;
+    } else if(randNumber > score ){
+        losses ++;
+        return losses
         reset();
-    }
-    else{ 
-        while(score < randNumber){
-        score = $(".crystals-button").val() + result;
-        }
     };
+
+console.log(crystalOne, crystalTwo, crystalThree, crystalFour);
+
 $(".score").text(score);
 });
-
-if()
-
 
 
 });
