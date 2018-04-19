@@ -1,0 +1,30 @@
+body {
+    background-image: url(../images/wood-texture.jpg);
+    color: gainsboro;
+    font-family: 'Amatic SC', cursive;
+}
+
+.header {
+    background-image: url(../images/dark.png); 
+    text-align: center;
+    margin: 10px;
+    border: solid 3px plum;
+    opacity: 0.9;
+}
+.content {
+    background-image: url(../images/dark.png); 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+.instructions {
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+}
+img {
+height: 300px;
+}
+p{
+    font-size: 20px;
+}

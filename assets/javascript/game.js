@@ -36,6 +36,7 @@ $(".green").attr("value", crystalTwo);
  $(".purple").attr("value", crystalThree);
  $(".white").attr("value", crystalFour);
 
+ console.log(crystalOne);
 
 //add value of crystals to score
 $(".crystals").click(function (){
@@ -43,7 +44,8 @@ $(".crystals").click(function (){
        let crystalValue = ($(this).val(".crystals"));
        let newCrystalValue = parseInt(crystalValue) 
        score += newCrystalValue
-    }else if (randNumber = score){
+       $(".score").text(score);
+    }else if (randNumber === score){
         wins ++;
         return losses
         reset();
@@ -53,9 +55,6 @@ $(".crystals").click(function (){
         reset();
     };
 
-console.log(crystalOne, crystalTwo, crystalThree, crystalFour);
-
-$(".score").text(score);
 });
 
 

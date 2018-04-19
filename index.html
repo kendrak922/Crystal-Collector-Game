@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!-- meta -->
+    <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- styles -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- Title -->
-<title>Crystal Game</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <!-- Title -->
+    <title>Crystal Game</title>
 </head>
+
 <body>
-<div class="container">
-  <div class ="row">
-    <div class = "col-xs-2"></div>
-    <div class = "col-xs-8 header">
-        <h1>Crystal Collector</h1>
-    </div>
-  </div>
-    <div class = "row">
-    <div class = "col-xs-2"></div>
-      <div class = "col-xs-8">
-        <p>
-        You wil be given a random number at the start of the game. 
-        <br><br>
-        There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
-       <br><br>
-       You win the game by matching your total score to random number, you lose the game if the total score goes about the random number. 
-       <br><br>
-       The value of each crystal is hideen from you until you click on it.
-       <br><br>
-       Each time when the game starts, the game will change the values of each crystal.
-       </p>  
-   </div>
-    </div>
-    <div class = "row">
-        <div class = "col-xs-1"></div>
-        <div class= "col-xs-3">
-        <h2>Number to match:</h2>
-        <p class = "randNumber"></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8 header">
+                <h1>Crystal Collector</h1>
+            </div>
         </div>
-        <div class = "col-xs-2"></div>
-        <div class= "col-xs-3">
-        <h2>Score:</h2>
-        <h3>Wins:</h3>
-        <p class = "wins"></p>
-        <h3>Losses:</h3>
-        <p class = "losses"></p>
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8 content instructions">
+                <p>
+                    You wil be given a random number at the start of the game.
+                    <br>
+                    <br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to
+                    your total score.
+                    <br>
+                    <br> You win the game by matching your total score to random number, you lose the game if the total score
+                    goes about the random number.
+                    <br>
+                    <br> The value of each crystal is hideen from you until you click on it.
+                    <br>
+                    <br> Each time when the game starts, the game will change the values of each crystal.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-3 content">
+                <h3>Number to match:</h2>
+                    <p class="randNumber"></p>
+                    <h3>Your total score is:</h2>
+                        <p class="score">0</p>
+            </div>
+            <div class="col-xs-1"></div>
+            <div class="col-xs-4 content">
+                <h3>Wins:</h3>
+                <p class="wins"></p>
+                <h3>Losses:</h3>
+                <p class="losses"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-2">
+                <button class="crystals button orange">
+                    <img class="img-responsive" src="assets/images/citrine.jpg" alt="orange crystal">
+                </button>
+            </div>
+            <div class="col-xs-2">
+                <button class="crystals button green">
+                    <img class="img-responsive" src="assets/images/fluorite.jpg" alt="green crystal">
+                </button>
+            </div>
+            <div class="col-xs-2">
+                <button class="crystals button purple">
+                    <img class="img-responsive" src="assets/images/purple.jpg" alt="purple crystal">
+                </button>
+            </div>
+            <div class="col-xs-2 img-responsive">
+                <button class="crystals button white">
+                    <img class="img-responsive" src="assets/images/white.jpg" alt="white crystal">
+                </button>
+            </div>
         </div>
     </div>
-   <div class = "row">
-    <div class = "col-xs-1"></div>
-    <div class = "col-xs-2">
-  <button class="crystals button"><img class = "img-responsive orange " src= "assets/images/citrine.jpg" alt = "orange crystal">
-    </button>    
-    </div>
-    <div class = "col-xs-2">
-    <button class="crystals button"><img class = "img-responsive green" src = "assets/images/fluorite.jpg" alt = "green crystal">
-    </button></div>
-    <div class = "col-xs-2">
-    <button class="crystals button"><img class = "img-responsive purple" src = "assets/images/purple.jpg" alt = "purple crystal">
-    </button>
-    </div>
-    <div class ="col-xs-2 img-responsive">
-    <button class="crystals button"><img class = "img-responsive white" src = "assets/images/white.jpg" alt = "white crystal">
-    </button>
-    </div>
-    </div>
-    <div class = "row">
-            <div class = "col-xs-1"></div>
-            <div class= "col-xs-3">
-     <h2>Your total score is:</h2>           
-     <p class = "score"></p>
-     </div>
-     </div>
-    </div>
-<script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-<script type= "text/javascript" src="assets/javascript/game.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
+
 </html>
